@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3b172d">
+  <meta name="description" content="A birthday surprise for Ganesh, made with love by Lakshmi Kalyani.">
+  <title>Happy Birthday Ganesh — With Love from Lakshmi Kalyani ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main>
+    <section class="welcome" id="welcome">
+      <div class="welcome-inner">
+        <span class="eyebrow">A LITTLE SURPRISE, MADE WITH LOVE</span>
+        <div class="tiny-heart">♥</div>
+        <p class="script intro-script">To my favourite person</p>
+        <h1>Happy Birthday,<br><span>Ganesh</span></h1>
+        <p class="welcome-copy">Every love story has a thousand little moments, and you make mine beautiful. Today is your day, Ganesh — may it bring you the happiness, laughter and love you deserve. I feel lucky to share this journey with you.</p>
+        <p class="from-line">With all my love, <strong>Lakshmi Kalyani</strong> ♥</p>
+        <button class="open-button" id="openSurprise">Open your surprise <span>♥</span></button>
+        <p class="tap-hint">A little love is waiting inside</p>
+      </div>
+      <div class="corner-note">MADE JUST FOR YOU · ALWAYS</div>
+    </section>
+
+    <section class="memories hidden" id="memories">
+      <header class="page-heading">
+        <span class="eyebrow">A BIRTHDAY LOVE NOTE FROM LAKSHMI KALYANI</span>
+        <h2>For the man who makes<br><span>my world brighter</span></h2>
+        <p class="instruction">Touch or drag each little note to discover your wishes. ✨</p>
+      </header>
+
+      <div class="stage" id="stage">
+        <article class="paper note note-one draggable">
+          <span class="note-number">01 · MY WISH</span>
+          <p class="script">My dearest Ganesh,</p>
+          <p>On your birthday, I wish you endless happiness, good health, success in everything you do, and countless reasons to smile. May this year bring you everything your heart hopes for.</p>
+          <span class="signature">Always yours, Lakshmi Kalyani ♥</span>
+        </article>
+
+        <article class="paper photo-card photo-one draggable">
+          <span class="photo-frame"><img src="images/photo-1.jpg" alt="A favourite memory of Ganesh and Lakshmi Kalyani" onload="this.nextElementSibling.style.display='none'" onerror="this.parentElement.classList.add('photo-placeholder');this.style.display='none'"><span class="placeholder-label">ADD PHOTO 1</span></span>
+          <p class="photo-caption">The day our beautiful journey began ♥</p>
+        </article>
+
+        <article class="paper note note-two draggable">
+          <span class="note-number">02 · MY THANK YOU</span>
+          <p class="script">Thank you for being you.</p>
+          <p>Your kindness, your smile and the way you make ordinary moments special mean more to me than words can say. Thank you for being my favourite person.</p>
+          <span class="signature">You are so special to me ♥</span>
+        </article>
+
+        <article class="paper photo-card photo-two draggable">
+          <span class="photo-frame"><img src="images/photo-2.jpg" alt="Another special couple memory" onload="this.nextElementSibling.style.display='none'" onerror="this.parentElement.classList.add('photo-placeholder');this.style.display='none'"><span class="placeholder-label">ADD PHOTO 2</span></span>
+          <p class="photo-caption">Every moment with you is precious</p>
+        </article>
+
+        <article class="paper note note-three draggable">
+          <span class="note-number">03 · MY PROMISE</span>
+          <p class="script">Through every season…</p>
+          <p>I will keep cheering for you, believing in you and standing beside you through every season. Here is to many more adventures, laughs and beautiful memories together.</p>
+          <span class="signature">Always by your side, heart to heart ♥</span>
+        </article>
+
+        <article class="paper photo-card photo-three draggable">
+          <span class="photo-frame"><img src="images/photo-3.jpg" alt="A treasured birthday memory" onload="this.nextElementSibling.style.display='none'" onerror="this.parentElement.classList.add('photo-placeholder');this.style.display='none'"><span class="placeholder-label">ADD PHOTO 3</span></span>
+          <p class="photo-caption">My favourite person, my forever ♥</p>
+        </article>
+
+        <article class="paper photo-card photo-four draggable">
+          <span class="photo-frame"><img src="images/photo-4.jpg" alt="A happy memory together" onload="this.nextElementSibling.style.display='none'" onerror="this.parentElement.classList.add('photo-placeholder');this.style.display='none'"><span class="placeholder-label">ADD PHOTO 4</span></span>
+          <p class="photo-caption">Here’s to a lifetime of memories together</p>
+        </article>
+      </div>
+
+      <section class="final-wish">
+        <div class="final-heart">♥</div>
+        <p class="script">Happy Birthday, Ganesh!</p>
+        <h2>May your year be as lovely<br>as your heart.</h2>
+        <p>Thank you for making my life brighter just by being in it.</p>
+        <div class="final-signature">With endless love, <span>Lakshmi Kalyani</span></div>
+        <button class="replay-button" id="replay">Read our little story again ↗</button>
+      </section>
+      <footer>MADE WITH LOVE FOR GANESH · FROM LAKSHMI KALYANI ♥</footer>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+
+  <div class="music-player" aria-label="Birthday song player">
+    <audio id="birthdaySong" src="music/birthday-song.mp3" preload="auto" playsinline></audio>
+    <span class="music-note" aria-hidden="true">♫</span>
+    <div class="music-copy"><strong>Our special song</strong><small id="musicStatus">Ready when you are</small></div>
+    <button id="musicToggle" type="button" aria-label="Play birthday song" aria-pressed="false">
+      <span id="musicIcon" aria-hidden="true">▶</span><span id="musicButtonText">Play</span>
+    </button>
+  </div>
+  </body>
+</html>

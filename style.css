@@ -1,0 +1,80 @@
+*{box-sizing:border-box}
+:root{--wine:#3b172d;--rose:#b85f78;--blush:#f8e9e9;--gold:#c69b65;--ink:#442638}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:#f8eeee;color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+.ambient{position:fixed;border-radius:50%;filter:blur(2px);pointer-events:none;z-index:-1}
+.ambient-one{width:420px;height:420px;background:#f3d9df;top:-180px;right:-130px}
+.ambient-two{width:360px;height:360px;background:#f2e3d0;bottom:-170px;left:-120px}
+.welcome{min-height:100svh;display:grid;place-items:center;padding:38px 20px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#fffaf7 0%,#f8e9e9 58%,#f1d9df 100%)}
+.welcome:before,.welcome:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #c69b6555;border-radius:50%;pointer-events:none}
+.welcome:before{top:-170px;left:-100px}.welcome:after{bottom:-180px;right:-90px}
+.welcome-inner{width:min(100%,680px);text-align:center;padding:clamp(28px,6vw,64px) 22px;position:relative;border:1px solid #c69b6577;background:#fffaf7b8;box-shadow:0 25px 80px #67344a18;backdrop-filter:blur(8px)}
+.eyebrow{font-size:10px;letter-spacing:.28em;font-weight:700;color:#a16b70}
+.tiny-heart{font-size:25px;color:var(--rose);margin:24px 0 8px;animation:pulse 1.8s infinite}
+.script{font-family:"Great Vibes",cursive;color:var(--rose);font-weight:400}
+.intro-script{font-size:clamp(30px,5vw,43px);margin:0 0 4px}
+h1,h2{font-family:"Playfair Display",serif;font-weight:500}
+h1{font-size:clamp(38px,8vw,72px);line-height:1.12;margin:8px 0 18px;color:var(--wine)}
+h1 span,.page-heading h2 span{color:var(--rose);font-style:italic}
+.welcome-copy{max-width:470px;margin:0 auto;color:#795c68;line-height:1.8;font-size:14px}
+.from-line{margin:24px 0 28px;color:#805c6b;font-size:14px}.from-line strong{color:var(--wine);font-family:"Playfair Display",serif;font-size:18px}
+.open-button{border:0;border-radius:40px;padding:15px 27px;background:var(--wine);color:white;font:600 13px "DM Sans",sans-serif;letter-spacing:.04em;box-shadow:0 10px 25px #3b172d30;cursor:pointer;transition:.25s}
+.open-button:hover{transform:translateY(-3px);background:#672b4c}.open-button span{color:#f5b8c7;margin-left:9px}
+.tap-hint{font-size:10px;letter-spacing:.12em;color:#a47b83;margin-top:15px}
+.corner-note{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:.24em;color:#a77b82}
+.hidden{display:none!important}
+.memories{padding:76px 18px 30px;max-width:1180px;margin:auto}
+.page-heading{text-align:center;margin:0 auto 20px}
+.page-heading h2{font-size:clamp(30px,5vw,48px);line-height:1.18;color:var(--wine);margin:16px 0 12px}
+.instruction{font-size:12px;color:#94727c}
+.stage{position:relative;min-height:900px;max-width:1000px;margin:0 auto;overflow:hidden;border-radius:28px;background:radial-gradient(ellipse at center,#fffaf8 0%,#f6e8e8 75%);border:1px solid #e7cfd1}
+.paper{position:absolute;background:#fffdf9;border:1px solid #eadbd5;box-shadow:0 15px 35px #4b1f3420;touch-action:none;cursor:grab;user-select:none;transition:box-shadow .2s}
+.paper:active{cursor:grabbing;box-shadow:0 22px 45px #4b1f3440}
+.note{width:290px;min-height:235px;padding:25px 25px 22px}
+.note-one{left:8%;top:8%;transform:rotate(-5deg)}.note-two{right:8%;top:37%;transform:rotate(4deg)}.note-three{left:12%;bottom:7%;transform:rotate(3deg)}
+.note-number{font-size:9px;letter-spacing:.2em;color:#b18a76;font-weight:700}
+.note .script{font-size:31px;margin:17px 0 10px}
+.note p:not(.script){font-size:12px;line-height:1.85;color:#755b62}
+.signature{display:block;margin-top:16px;font-family:"Playfair Display",serif;font-style:italic;color:#a64f6b;font-size:13px}
+.photo-card{width:230px;padding:10px 10px 15px;text-align:center}
+.photo-one{right:12%;top:7%;transform:rotate(6deg)}.photo-two{left:39%;top:36%;transform:rotate(-5deg)}.photo-three{right:8%;bottom:7%;transform:rotate(4deg)}.photo-four{left:8%;top:42%;transform:rotate(5deg)}
+.photo-frame{height:225px;display:grid;place-items:center;position:relative;background:#f4e5e3;overflow:hidden}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-placeholder{background:linear-gradient(135deg,#f6e4e5,#f4eadc);border:1px dashed #cda9a8}
+.placeholder-label{font-size:10px;letter-spacing:.16em;color:#a7797d}
+.photo-caption{font-family:"Great Vibes",cursive;color:#8b4c63;font-size:23px;margin:10px 2px 0}
+.final-wish{text-align:center;padding:75px 20px 60px;max-width:680px;margin:auto}
+.final-heart{font-size:34px;color:var(--rose);animation:pulse 1.8s infinite}
+.final-wish .script{font-size:42px;margin:10px 0}
+.final-wish h2{font-size:clamp(28px,5vw,42px);line-height:1.25;color:var(--wine);margin:10px 0}
+.final-wish>p:not(.script){color:#866b75;font-size:13px;line-height:1.8}
+.final-signature{margin:28px 0;color:#886b73;font-size:13px}.final-signature span{display:block;font:36px "Great Vibes",cursive;color:var(--rose);margin-top:5px}
+.replay-button{border:1px solid #d8b6b8;border-radius:30px;padding:12px 20px;background:transparent;color:#875367;font-size:11px;cursor:pointer}
+footer{text-align:center;font-size:9px;letter-spacing:.2em;color:#ad8790;padding:20px}
+.heart-float{position:fixed;bottom:-30px;color:#c56f86;pointer-events:none;z-index:10;animation:floatUp 4s linear forwards}
+@keyframes pulse{50%{transform:scale(1.18)}}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:700px){
+ .memories{padding:54px 12px 20px}.stage{min-height:1450px}
+ .note{width:min(78vw,300px);min-height:220px;padding:20px}
+ .note-one{left:5%;top:3%}.photo-one{right:5%;top:20%;width:190px}.photo-frame{height:190px}
+ .note-two{right:4%;top:39%}.photo-two{left:5%;top:56%;width:190px}
+ .note-three{left:5%;bottom:3%}.photo-three{right:5%;bottom:3%;width:190px}
+ .photo-four{left:5%;top:76%;width:190px}
+ .photo-four .photo-frame{height:175px}
+ .note .script{font-size:27px}.note p:not(.script){font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Floating birthday-song player */
+.music-player{position:fixed;right:18px;bottom:18px;z-index:1000;display:flex;align-items:center;gap:11px;padding:10px 12px;border:1px solid #d9b6b9;border-radius:50px;background:#fffaf7ee;box-shadow:0 10px 30px #3b172d24;backdrop-filter:blur(12px);max-width:calc(100vw - 28px)}
+.music-note{display:grid;place-items:center;width:35px;height:35px;border-radius:50%;background:#f4e1e5;color:#a64f6b;font-size:23px}
+.music-copy{display:flex;flex-direction:column;gap:2px;min-width:90px}
+.music-copy strong{font:600 11px "DM Sans",sans-serif;color:#51253d}
+.music-copy small{font:10px "DM Sans",sans-serif;color:#997985}
+#musicToggle{border:0;border-radius:30px;padding:9px 13px;background:#3b172d;color:white;font:600 11px "DM Sans",sans-serif;cursor:pointer;display:flex;align-items:center;gap:6px;min-width:72px;justify-content:center}
+#musicToggle:hover{background:#672b4c}
+.music-player.playing .music-note{animation:musicPulse 1.2s ease-in-out infinite}
+@keyframes musicPulse{50%{transform:scale(1.12);box-shadow:0 0 0 7px #f4e1e566}}
+@media(max-width:480px){.music-player{right:10px;bottom:10px;padding:8px 10px;gap:8px}.music-copy{min-width:78px}.music-copy strong{font-size:10px}}
